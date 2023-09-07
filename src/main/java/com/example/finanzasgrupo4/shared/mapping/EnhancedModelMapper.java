@@ -1,4 +1,4 @@
-package com.example.appbackend.shared.mapping;
+package com.example.finanzasgrupo4.shared.mapping;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Component;
