@@ -27,4 +27,9 @@ public class Customer extends AuditModel {
     @NotNull
     private Long identityDoc;
 
+    @NotBlank
+    private String username;
+    @NotBlank
+    private String password;
+
 }
