@@ -8,11 +8,11 @@
         <version>3.1.3</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.example</groupId>
-    <artifactId>demo</artifactId>
+    <groupId>com.finanzasgrupo4</groupId>
+    <artifactId>finanzasgrupo4</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>demo</name>
-    <description>demo</description>
+    <name>finanzasgrupo4</name>
+    <description>finanzasgrupo4</description>
     <properties>
         <java.version>17</java.version>
     </properties>
