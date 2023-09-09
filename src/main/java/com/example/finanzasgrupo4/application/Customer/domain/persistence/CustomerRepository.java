@@ -9,9 +9,11 @@ import java.util.List;
 public interface CustomerRepository extends JpaRepository<Customer, Long> {
 
     List<Customer> findAll();
-    Customer findCustomerByUsername(String username);
+    Customer findByUsername(String username);
+    Customer findByEmail(String email);
+    Customer findByIdentityDoc(Long identityDoc);
     //This help us with log in instead of jwt method :(
-    Customer findCustomerByUsernameAndPassword(String username, String password);
+    Customer findByEmailAndPassword(String username, String password);
 
 
 }
