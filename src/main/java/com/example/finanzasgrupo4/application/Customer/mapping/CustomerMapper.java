@@ -5,14 +5,17 @@ import com.example.finanzasgrupo4.application.Customer.resource.CreateCustomerRe
 import com.example.finanzasgrupo4.application.Customer.resource.CustomerResource;
 import com.example.finanzasgrupo4.application.Customer.resource.UpdateCustomerResource;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 import com.example.finanzasgrupo4.shared.mapping.*;
+import org.springframework.stereotype.Component;
 
 import java.io.Serializable;
 import java.util.List;
-
+@Component
+@EnableAutoConfiguration
 public class CustomerMapper implements Serializable {
     @Autowired
     EnhancedModelMapper mapper;
@@ -24,6 +27,10 @@ public class CustomerMapper implements Serializable {
 
     public Page<CustomerResource> modelListPage(List<Customer> modelList, Pageable pageable){
         return new PageImpl<>(mapper.mapList(modelList, CustomerResource.class), pageable, modelList.size());
+    }
+
+    public List<CustomerResource> modelList(List<Customer> modelList){
+        return mapper.mapList(modelList,CustomerResource.class);
     }
 
 }
